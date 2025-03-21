@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - FreshDairy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-[Times New Roman]">
+
+<!-- Header -->
+<header class="bg-white shadow-md py-4 px-6 flex justify-between items-center fixed top-0 left-0 w-full z-50 transition-all">
+    <!-- Logo -->
+    <div class="text-blue-600 font-bold text-xl">
+        <a href="index.html">FreshDairy</a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex space-x-6 text-gray-700 font-bold">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="products.html" class="text-blue-600 font-semibold">Products</a>
+        <a href="Subscription.html" class="hover:text-blue-600">Subscription</a>
+        <a href="about.html" class="hover:text-blue-600">About Us</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+    </nav>
+
+    <!-- Right Side Buttons -->
+    <div class="flex items-center space-x-4">
+        <a href="Subscription.html" class="bg-blue-600 text-white px-6 py-2 rounded-md hidden sm:block hover:bg-blue-700 transition">
+            Subscribe Now
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="lg:hidden text-gray-700 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation (Hidden by Default) -->
+    <nav id="mobile-menu" class="absolute top-16 left-0 w-full bg-white shadow-md hidden lg:hidden">
+        <ul class="flex flex-col items-center space-y-4 py-4">
+            <li><a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
+            <li><a href="products.html" class="text-blue-600 font-semibold">Products</a></li>
+            <li><a href="subscription.html" class="text-gray-700 hover:text-blue-600">Subscription</a></li>
+            <li><a href="about.html" class="text-gray-700 hover:text-blue-600">About Us</a></li>
+            <li><a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a></li>
+            <li><a href="subscribe.html" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">Subscribe Now</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Prevent content from being hidden behind the fixed header -->
+<div class="mt-20"></div>
+
+<!-- JavaScript for Mobile Menu Toggle -->
+<script>
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        var menu = document.getElementById("mobile-menu");
+        if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+        } else {
+            menu.classList.add("hidden");
+        }
+    });
+</script>
+
+
+<!-- Main Container -->
+<div class="max-w-7xl mx-auto px-6 py-10 flex flex-col lg:flex-row gap-6">
+
+    <!-- Sidebar Filters -->
+    <aside class="w-full lg:w-1/4 bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">Filters</h2>
+
+        <!-- Price Range -->
+        <div class="mb-6">
+            <p class="font-bold text-gray-700">Price Range</p>
+            <input type="range" min="0" max="20" class="w-full mt-2 accent-blue-600">
+            <div class="flex justify-between text-sm text-gray-600 mt-1">
+                <span>$0</span>
+                <span>$20</span>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="mb-6">
+            <p class="font-bold text-gray-700">Categories</p>
+            <div class="space-y-2 text-gray-700 text-md font-semibold">
+                <label class="flex items-center"><input type="checkbox" class="mr-2 accent-blue-600">Milk</label>
+                <label class="flex items-center"><input type="checkbox" class="mr-2 accent-blue-600" checked>Cheese</label>
+                <label class="flex items-center"><input type="checkbox" class="mr-2 accent-blue-600" checked>Yogurt</label>
+                <label class="flex items-center"><input type="checkbox" class="mr-2 accent-blue-600">Butter</label>
+                <label class="flex items-center"><input type="checkbox" class="mr-2 accent-blue-600">Cream</label>
+            </div>
+        </div>
+
+        <!-- Dietary Options -->
+        <div class="mb-6">
+            <p class="font-bold text-gray-700">Dietary Options</p>
+            <div class="space-y-2 text-gray-700 text-md font-semibold">
+                <label class="flex items-center"><input type="checkbox" class="mr-2 accent-blue-600">Organic</label>
+                <label class="flex items-center"><input type="checkbox" class="mr-2 accent-blue-600" checked>Grass-Fed</label>
+                <label class="flex items-center"><input type="checkbox" class="mr-2 accent-blue-600" checked>Lactose-Free</label>
+                <label class="flex items-center"><input type="checkbox" class="mr-2 accent-blue-600">Low-Fat</label>
+                <label class="flex items-center"><input type="checkbox" class="mr-2 accent-blue-600">No Added Sugar</label>
+            </div>
+        </div>
+
+        <!-- Ratings -->
+        <div class="mb-6">
+            <p class="font-bold text-gray-700">Rating</p>
+            <div class="space-y-2 text-gray-700 text-md font-semibold">
+                <label class="flex items-center"><input type="radio" name="rating" class="mr-2 accent-blue-600" checked> ⭐⭐⭐⭐⭐ & Up</label>
+                <label class="flex items-center"><input type="radio" name="rating" class="mr-2 accent-blue-600"> ⭐⭐⭐⭐☆ & Up</label>
+                <label class="flex items-center"><input type="radio" name="rating" class="mr-2 accent-blue-600"> ⭐⭐⭐☆ & Up</label>
+                <label class="flex items-center"><input type="radio" name="rating" class="mr-2 accent-blue-600"> ⭐⭐☆ & Up</label>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+<div class="flex flex-col space-y-2">
+    <button class="w-full bg-blue-600 text-white py-2 rounded-md text-lg font-bold hover:bg-blue-700 transition">
+        Apply Filters
+    </button>
+    <button id="resetFilters" class="w-full bg-gray-200 text-gray-600 py-2 rounded-md text-lg font-bold hover:bg-gray-300 transition">
+        Reset
+    </button>
+</div>
+
+<!-- JavaScript to Reset Filters -->
+<script>
+document.getElementById("resetFilters").addEventListener("click", function () {
+    // Uncheck all checkboxes
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
+
+    // Unselect all radio buttons
+    document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false);
+
+    // Reset price range to minimum
+    const priceRange = document.querySelector('input[type="range"]');
+    if (priceRange) {
+        priceRange.value = priceRange.min;
+    }
+});
+</script>
+
+        
+    </aside>
+    
+
+    <!-- Products Section -->
+    <main class="w-full lg:w-3/4">
+        <h2 class="text-2xl font-bold mb-6">All Products</h2>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+           <!-- Product 1 -->
+<div class="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg border border-gray-200">
+    <a href="#" class="block">
+        <!-- Product Image -->
+        <div class="h-40 bg-gray-100 flex items-center justify-center rounded-md overflow-hidden">
+            <img src="images/Organic Whole Milk.jpg" alt="Organic Whole Milk" class="w-full h-full object-cover rounded-md transition-transform hover:scale-110">
+        </div>
+    </a>
+
+    <!-- Ratings -->
+    <div class="flex items-center mt-3">
+        <div class="text-yellow-500 text-lg">⭐⭐⭐⭐☆</div>
+        <span class="text-gray-500 text-sm ml-2">(124)</span>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="font-bold text-lg mt-2">Organic Whole Milk</h3>
+    <p class="text-gray-500 text-sm">Fresh organic whole milk from grass-fed cows</p>
+
+    <!-- Price & View Details -->
+    <div class="flex justify-between items-center mt-4">
+        <p class="text-xl font-bold">$4.99</p>
+        <a href="#" class="text-blue-600 hover:underline font-semibold transition-opacity hover:opacity-80">View Details</a>
+    </div>
+</div>
+
+<!-- Product 2  -->
+<div class="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg border border-gray-200">
+    <a href="#" class="block">
+        <!-- Product Image -->
+        <div class="h-40 bg-gray-100 flex items-center justify-center rounded-md overflow-hidden">
+            <img src="images/Artisan Cheese Selection.webp" alt="Organic Whole Milk" class="w-full h-full object-cover rounded-md transition-transform hover:scale-110">
+        </div>
+    </a>
+
+    <!-- Ratings -->
+    <div class="flex items-center mt-3">
+        <div class="text-yellow-500 text-lg">⭐⭐⭐⭐☆</div>
+        <span class="text-gray-500 text-sm ml-2">(86)</span>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="font-bold text-lg mt-2">Artisan Cheese Selection</h3>
+    <p class="text-gray-500 text-sm">Handcrafted selection of premium artisan cheeses</p>
+
+    <!-- Price & View Details -->
+    <div class="flex justify-between items-center mt-4">
+        <p class="text-xl font-bold">$12.99</p>
+        <a href="#" class="text-blue-600 hover:underline font-semibold transition-opacity hover:opacity-80">View Details</a>
+    </div>
+</div>
+
+<!-- Product 3  -->
+<div class="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg border border-gray-200">
+    <a href="#" class="block">
+        <!-- Product Image -->
+        <div class="h-40 bg-gray-100 flex items-center justify-center rounded-md overflow-hidden">
+            <img src="images/Greek Yogurt.jpg" alt="Organic Whole Milk" class="w-full h-full object-cover rounded-md transition-transform hover:scale-110">
+        </div>
+    </a>
+
+    <!-- Ratings -->
+    <div class="flex items-center mt-3">
+        <div class="text-yellow-500 text-lg">⭐⭐⭐⭐☆</div>
+        <span class="text-gray-500 text-sm ml-2">(152)</span>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="font-bold text-lg mt-2">Greek Yogurt</h3>
+    <p class="text-gray-500 text-sm">Creamy Greek yogurt made with traditional methods</p>
+
+    <!-- Price & View Details -->
+    <div class="flex justify-between items-center mt-4">
+        <p class="text-xl font-bold">$3.49</p>
+        <a href="#" class="text-blue-600 hover:underline font-semibold transition-opacity hover:opacity-80">View Details</a>
+    </div>
+</div>
+
+<!-- Product 4  -->
+<div class="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg border border-gray-200">
+    <a href="#" class="block">
+        <!-- Product Image -->
+        <div class="h-40 bg-gray-100 flex items-center justify-center rounded-md overflow-hidden">
+            <img src="images/Farm Fresh Butter.avif" alt="Organic Whole Milk" class="w-full h-full object-cover rounded-md transition-transform hover:scale-110">
+        </div>
+    </a>
+
+    <!-- Ratings -->
+    <div class="flex items-center mt-3">
+        <div class="text-yellow-500 text-lg">⭐⭐⭐⭐☆</div>
+        <span class="text-gray-500 text-sm ml-2">(98)</span>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="font-bold text-lg mt-2">Farm Fresh Butter</h3>
+    <p class="text-gray-500 text-sm">Rich and creamy butter from pasture-raised cows</p>
+
+    <!-- Price & View Details -->
+    <div class="flex justify-between items-center mt-4">
+        <p class="text-xl font-bold">$5.99</p>
+        <a href="#" class="text-blue-600 hover:underline font-semibold transition-opacity hover:opacity-80">View Details</a>
+    </div>
+</div>
+
+<!-- Product 5  -->
+<div class="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg border border-gray-200">
+    <a href="#" class="block">
+        <!-- Product Image -->
+        <div class="h-40 bg-gray-100 flex items-center justify-center rounded-md overflow-hidden">
+            <img src="images/Chocolate Milk.jpg" alt="Organic Whole Milk" class="w-full h-full object-cover rounded-md transition-transform hover:scale-110">
+        </div>
+    </a>
+
+    <!-- Ratings -->
+    <div class="flex items-center mt-3">
+        <div class="text-yellow-500 text-lg">⭐⭐⭐⭐☆</div>
+        <span class="text-gray-500 text-sm ml-2">(203)</span>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="font-bold text-lg mt-2">Chocolate Milk</h3>
+    <p class="text-gray-500 text-sm">Delicious chocolate milk, a treat for all ages</p>
+
+    <!-- Price & View Details -->
+    <div class="flex justify-between items-center mt-4">
+        <p class="text-xl font-bold">$4.49</p>
+        <a href="#" class="text-blue-600 hover:underline font-semibold transition-opacity hover:opacity-80">View Details</a>
+    </div>
+</div>
+
+<!-- Product 6  -->
+<div class="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg border border-gray-200">
+    <a href="#" class="block">
+        <!-- Product Image -->
+        <div class="h-40 bg-gray-100 flex items-center justify-center rounded-md overflow-hidden">
+            <img src="images/Cheddar Cheese.avif" alt="Organic Whole Milk" class="w-full h-full object-cover rounded-md transition-transform hover:scale-110">
+        </div>
+    </a>
+
+    <!-- Ratings -->
+    <div class="flex items-center mt-3">
+        <div class="text-yellow-500 text-lg">⭐⭐⭐⭐☆</div>
+        <span class="text-gray-500 text-sm ml-2">(112)</span>
+    </div>
+
+    <!-- Product Title -->
+    <h3 class="font-bold text-lg mt-2">Cheddar Cheese</h3>
+    <p class="text-gray-500 text-sm">Aged cheddar cheese with rich, sharp flavor</p>
+
+    <!-- Price & View Details -->
+    <div class="flex justify-between items-center mt-4">
+        <p class="text-xl font-bold">$6.99</p>
+        <a href="#" class="text-blue-600 hover:underline font-semibold transition-opacity hover:opacity-80">View Details</a>
+    </div>
+</div>
+
+            
+            <!-- Repeat for multiple products (as shown in UI) -->
+        </div>
+
+       <!-- Pagination -->
+<div class="flex justify-center mt-6 space-x-2">
+    <a href="products.html?page=1" class="page-btn px-4 py-2 bg-blue-600 text-white rounded-md" data-page="1">1</a>
+    <a href="products.html?page=2" class="page-btn px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300" data-page="2">2</a>
+    <a href="products.html?page=3" class="page-btn px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300" data-page="3">3</a>
+    <a id="nextPage" href="products.html?page=2" class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300">❯</a>
+</div>
+
+<!-- JavaScript for Pagination -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let currentPage = new URLSearchParams(window.location.search).get('page') || 1;
+    currentPage = parseInt(currentPage);
+    const totalPages = 3; // Change this if you have more pages
+
+    function updatePagination() {
+        document.querySelectorAll(".page-btn").forEach(btn => {
+            btn.classList.remove("bg-blue-600", "text-white");
+            btn.classList.add("bg-gray-200", "text-gray-600");
+            if (parseInt(btn.getAttribute("data-page")) === currentPage) {
+                btn.classList.add("bg-blue-600", "text-white");
+                btn.classList.remove("bg-gray-200", "text-gray-600");
+            }
+        });
+
+        // Update "Next" button link dynamically
+        document.getElementById("nextPage").href = `products.html?page=${Math.min(currentPage + 1, totalPages)}`;
+    }
+
+    updatePagination();
+});
+</script>
+
+    </main>
+
+</div>
+
+     <!-- Footer -->
+     <footer class="bg-gray-800 text-white py-12 px-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-4 gap-6">
+            <div>
+                <h3 class="font-bold text-lg">FreshDairy</h3>
+                <p class="text-gray-400">Delivering farm-fresh dairy products directly to your doorstep since 2025.</p>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Quick Links</h3>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="Subscription.html">Subscription</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Customer Service</h3>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Contact Us</h3>
+                <p class="text-gray-400">123 Dairy Farm Road, CA 90210</p>
+                <p class="text-gray-400">(123) 456-7890</p>
+                <p class="text-gray-400">info@freshdairy.com</p>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 mt-8">© 2025 FreshDairy. All rights reserved.</div>
+    </footer>
+
+</body>
+</html>

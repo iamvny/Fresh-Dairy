@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshDairy - Subscription</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animation for plans */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply animation to plans */
+        .plan {
+            animation: fadeInUp 0.6s ease-in-out;
+            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+        }
+
+        /* Hover effect */
+        .plan:hover {
+            transform: scale(1.03);
+        }
+
+        /* Selected plan border highlight */
+        .selected {
+            border: 3px solid #2563eb !important;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans">
+
+<!-- Header -->
+<header class="bg-white shadow-md py-4 px-6 flex justify-between items-center fixed top-0 left-0 w-full z-50 transition-all">
+    <div class="text-blue-600 font-bold text-2xl">
+        <a href="index.html">FreshDairy</a>
+    </div>
+
+    <nav class="hidden lg:flex space-x-6 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="products.html" class="hover:text-blue-600">Products</a>
+        <a href="Subscription.html" class="text-blue-600">Subscription</a>
+        <a href="about.html" class="hover:text-blue-600">About Us</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+    </nav>
+
+    <a href="Subscription.html" class="bg-blue-600 text-white px-6 py-2 rounded-md shadow-md hover:bg-blue-700 transition">
+        Subscribe Now
+    </a>
+</header>
+
+<!-- Add space to prevent content from being hidden behind the fixed header -->
+<div class="mt-20"></div>
+
+
+<!-- Hero Section -->
+<section class="text-center py-12 bg-white">
+    <h1 class="text-4xl font-extrabold text-gray-900">Choose Your Subscription Plan</h1>
+    <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
+        Get fresh dairy delivered on your schedule. Choose the plan that works best for you and enjoy farm-fresh products at your doorstep.
+    </p>
+</section>
+
+<!-- Subscription Plans -->
+<section class="bg-white py-16">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6">
+        <!-- Daily Plan -->
+        <div id="daily" class="plan bg-white p-6 rounded-lg shadow-md text-center border border-gray-200 cursor-pointer" onclick="selectPlan('daily')">
+            <h2 class="text-xl font-bold text-gray-800">Daily</h2>
+            <p class="text-gray-600 mt-2">Fresh milk delivered every morning</p>
+            <h3 class="text-3xl font-bold text-gray-900 mt-4">$2.99 <span class="text-lg text-gray-500">/ daily</span></h3>
+            <ul class="text-left mt-4 space-y-2 text-gray-700">
+                <li>✅ Fresh milk every day</li>
+                <li>✅ Flexible delivery times</li>
+                <li>✅ No long-term commitment</li>
+                <li>✅ Easy to pause or cancel</li>
+                <li>✅ Milk, yogurt, and basic dairy options</li>
+            </ul>
+            <a href="#" class="mt-6 block w-full bg-black text-white py-2 rounded-md hover:bg-gray-900 transition text-center">
+                Choose Daily Plan
+            </a>
+        </div>
+
+        <!-- Weekly Plan (Most Popular) -->
+        <div id="weekly" class="plan bg-white p-6 rounded-lg shadow-md text-center border-2 border-blue-600 relative cursor-pointer" onclick="selectPlan('weekly')">
+            <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-bl-md">Most Popular</div>
+            <h2 class="text-xl font-bold text-gray-800">Weekly</h2>
+            <p class="text-gray-600 mt-2">Weekly delivery of dairy essentials</p>
+            <h3 class="text-3xl font-bold text-gray-900 mt-4">$18.99 <span class="text-lg text-gray-500">/ weekly</span></h3>
+            <ul class="text-left mt-4 space-y-2 text-gray-700">
+                <li>✅ Save 10% on daily rate</li>
+                <li>✅ Customize your weekly box</li>
+                <li>✅ Add specialty items</li>
+                <li>✅ Free delivery</li>
+                <li>✅ All dairy products available</li>
+                <li>✅ Priority customer service</li>
+            </ul>
+            <a href="#" class="mt-6 block w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition text-center">
+                Choose Weekly Plan
+            </a>
+        </div>
+
+        <!-- Monthly Plan -->
+        <div id="monthly" class="plan bg-white p-6 rounded-lg shadow-md text-center border border-gray-200 cursor-pointer" onclick="selectPlan('monthly')">
+            <h2 class="text-xl font-bold text-gray-800">Monthly</h2>
+            <p class="text-gray-600 mt-2">Premium dairy subscription</p>
+            <h3 class="text-3xl font-bold text-gray-900 mt-4">$69.99 <span class="text-lg text-gray-500">/ monthly</span></h3>
+            <ul class="text-left mt-4 space-y-2 text-gray-700">
+                <li>✅ Save 15% on daily rate</li>
+                <li>✅ Premium selection included</li>
+                <li>✅ Artisan cheese rotation</li>
+                <li>✅ Exclusive member discounts</li>
+                <li>✅ Special seasonal products</li>
+                <li>✅ Early access to new products</li>
+                <li>✅ Premium customer support</li>
+            </ul>
+            <a href="#" class="mt-6 block w-full bg-black text-white py-2 rounded-md hover:bg-gray-900 transition text-center">
+                Choose Monthly Plan
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Plan Selection -->
+<script>
+    function selectPlan(planId) {
+        document.getElementById('daily').classList.remove('selected');
+        document.getElementById('weekly').classList.remove('selected');
+        document.getElementById('monthly').classList.remove('selected');
+        document.getElementById(planId).classList.add('selected');
+    }
+</script>
+
+<!-- Start Your Subscription Section -->
+<section class="bg-white py-12">
+    <div class="max-w-5xl mx-auto px-8 py-12 bg-white rounded-lg shadow-md">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Start Your Subscription</h2>
+
+        <!-- Personal Details -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label class="block text-gray-700">First Name</label>
+                <input type="text" placeholder="Enter your first name" class="w-full mt-1 px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+            </div>
+            <div>
+                <label class="block text-gray-700">Last Name</label>
+                <input type="text" placeholder="Enter your last name" class="w-full mt-1 px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+            </div>
+            <div>
+                <label class="block text-gray-700">Email</label>
+                <input type="email" placeholder="Enter your email" class="w-full mt-1 px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+            </div>
+            <div>
+                <label class="block text-gray-700">Phone</label>
+                <input type="tel" placeholder="Enter your phone number" class="w-full mt-1 px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+            </div>
+        </div>
+
+        <!-- Delivery Address -->
+        <div class="mt-8">
+            <label class="block text-gray-700">Street Address</label>
+            <input type="text" placeholder="Enter your street address" class="w-full mt-1 px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div>
+                <label class="block text-gray-700">City</label>
+                <input type="text" placeholder="Enter your city" class="w-full mt-1 px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+            </div>
+            <div>
+                <label class="block text-gray-700">State</label>
+                <select class="w-full mt-1 px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+                    <option>California</option>
+                    <option>Texas</option>
+                    <option>New York</option>
+                    <option>Florida</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-gray-700">ZIP Code</label>
+                <input type="text" placeholder="Enter your ZIP code" class="w-full mt-1 px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+            </div>
+        </div>
+
+        <!-- Subscription Plan -->
+        <div class="mt-8">
+            <label class="block text-gray-700 font-semibold">Subscription Plan</label>
+            <div class="mt-2 space-y-3">
+                <label class="flex items-center space-x-3">
+                    <input type="radio" name="plan" class="text-blue-500 focus:ring-blue-400" checked>
+                    <span>Daily Delivery - $2.99/day</span>
+                </label>
+                <label class="flex items-center space-x-3">
+                    <input type="radio" name="plan" class="text-blue-500 focus:ring-blue-400">
+                    <span>Weekly Delivery - $18.99/week</span>
+                </label>
+                <label class="flex items-center space-x-3">
+                    <input type="radio" name="plan" class="text-blue-500 focus:ring-blue-400">
+                    <span>Monthly Delivery - $69.99/month</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Delivery Preferences -->
+        <div class="mt-8">
+            <label class="block text-gray-700 font-semibold">Preferred Delivery Time</label>
+            <select class="w-full mt-2 px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+                <option>Morning (6-8 AM)</option>
+                <option>Day (10 AM-12 PM)</option>
+                <option>Afternoon (2-4 PM)</option>
+                <option>Evening (6-8 PM)</option>
+            </select>
+        </div>
+
+        <div class="mt-6">
+            <label class="block text-gray-700 font-semibold">Preferred Delivery Day</label>
+            <select class="w-full mt-2 px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+            </select>
+        </div>
+
+        <div class="mt-6">
+            <label class="block text-gray-700">Delivery Instructions (Optional)</label>
+            <input type="text" placeholder="E.g., Leave at front door, gate code: 1234" class="w-full mt-1 px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+        </div>
+
+        <!-- Product Preferences -->
+<div class="mt-8">
+    <label class="block text-gray-700 font-semibold text-lg">Product Preferences</label>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-4">
+        
+        <label class="flex items-start space-x-3">
+            <input type="checkbox" class="mt-1 text-blue-500 focus:ring-blue-400">
+            <span>
+                <span class="font-medium text-gray-900">Whole Milk</span>
+                <p class="text-sm text-gray-500">Fresh organic whole milk</p>
+            </span>
+        </label>
+
+        <label class="flex items-start space-x-3">
+            <input type="checkbox" class="mt-1 text-blue-500 focus:ring-blue-400">
+            <span>
+                <span class="font-medium text-gray-900">Skim Milk</span>
+                <p class="text-sm text-gray-500">Low-fat organic milk</p>
+            </span>
+        </label>
+
+        <label class="flex items-start space-x-3">
+            <input type="checkbox" class="mt-1 text-blue-500 focus:ring-blue-400">
+            <span>
+                <span class="font-medium text-gray-900">Greek Yogurt</span>
+                <p class="text-sm text-gray-500">Creamy Greek yogurt</p>
+            </span>
+        </label>
+
+        <label class="flex items-start space-x-3">
+            <input type="checkbox" class="mt-1 text-blue-500 focus:ring-blue-400">
+            <span>
+                <span class="font-medium text-gray-900">Artisan Cheese</span>
+                <p class="text-sm text-gray-500">Selection of premium cheeses</p>
+            </span>
+        </label>
+
+        <label class="flex items-start space-x-3">
+            <input type="checkbox" class="mt-1 text-blue-500 focus:ring-blue-400">
+            <span>
+                <span class="font-medium text-gray-900">Farm Fresh Butter</span>
+                <p class="text-sm text-gray-500">Rich and creamy butter</p>
+            </span>
+        </label>
+
+        <label class="flex items-start space-x-3">
+            <input type="checkbox" class="mt-1 text-blue-500 focus:ring-blue-400">
+            <span>
+                <span class="font-medium text-gray-900">Heavy Cream</span>
+                <p class="text-sm text-gray-500">Fresh heavy cream</p>
+            </span>
+        </label>
+        
+    </div>
+</div>
+
+
+       <!-- Terms and Conditions -->
+<div class="mt-8 flex items-start space-x-3">
+    <input type="checkbox" class="mt-1 text-blue-500 focus:ring-blue-400">
+    <span class="text-gray-700">
+        I agree to the 
+        <a href="#" class="text-blue-500 underline">Terms and Conditions</a> 
+        and 
+        <a href="#" class="text-blue-500 underline">Privacy Policy</a>.
+    </span>
+</div>
+
+       <!-- Submit Button -->
+<a href="#">
+    <button class="mt-8 w-full bg-blue-600 text-white py-4 rounded-lg font-semibold transition-all duration-300 
+                   transform hover:scale-105 hover:bg-blue-700 shadow-md hover:shadow-lg">
+        Start My Subscription
+    </button>
+</a>
+
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="max-w-6xl mx-auto px-6 py-12 bg-white shadow-lg rounded-lg">
+    <h2 class="text-2xl font-bold text-gray-800 text-center">Frequently Asked Questions</h2>
+    <div class="mt-6 space-y-4">
+        
+        <!-- FAQ Item -->
+        <div class="bg-white p-6 rounded-lg shadow-md border hover:shadow-xl transition-all duration-300">
+            <h3 class="font-semibold text-lg">How does the delivery work?</h3>
+            <p class="text-gray-600 mt-2">
+                We deliver your dairy products in insulated containers to keep them fresh. 
+                For daily subscriptions, delivery happens between 6-8 AM. For weekly and monthly plans, 
+                you can choose your preferred delivery day and time slot.
+            </p>
+        </div>
+
+        <!-- FAQ Item -->
+        <div class="bg-white p-6 rounded-lg shadow-md border hover:shadow-xl transition-all duration-300">
+            <h3 class="font-semibold text-lg">Can I change my subscription?</h3>
+            <p class="text-gray-600 mt-2">
+                Yes, you can modify, pause, or cancel your subscription at any time through your 
+                account dashboard. Changes for the next delivery must be made at least 24 hours in advance.
+            </p>
+        </div>
+
+        <!-- FAQ Item -->
+        <div class="bg-white p-6 rounded-lg shadow-md border hover:shadow-xl transition-all duration-300">
+            <h3 class="font-semibold text-lg">What if I'm not home for delivery?</h3>
+            <p class="text-gray-600 mt-2">
+                You can specify a safe place for us to leave your delivery. Our insulated packaging 
+                will keep products fresh for up to 4 hours. Alternatively, you can reschedule your delivery through your account.
+            </p>
+        </div>
+
+        <!-- FAQ Item -->
+        <div class="bg-white p-6 rounded-lg shadow-md border hover:shadow-xl transition-all duration-300">
+            <h3 class="font-semibold text-lg">Are there any long-term commitments?</h3>
+            <p class="text-gray-600 mt-2">
+                No, all our subscription plans are flexible with no long-term commitments. 
+                You can cancel anytime without penalties.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-4 gap-6">
+            <div>
+                <h3 class="font-bold text-lg">FreshDairy</h3>
+                <p class="text-gray-400">Delivering farm-fresh dairy products directly to your doorstep since 2025.</p>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Quick Links</h3>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="Subscription.html">Subscription</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Customer Service</h3>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Contact Us</h3>
+                <p class="text-gray-400">123 Dairy Farm Road, CA 90210</p>
+                <p class="text-gray-400">(123) 456-7890</p>
+                <p class="text-gray-400">info@freshdairy.com</p>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 mt-8">© 2025 FreshDairy. All rights reserved.</div>
+    </footer>
+</body>
+</html>

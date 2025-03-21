@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshDairy - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #333;
+            font-weight: 500;
+        }
+        nav a:hover, .active {
+            color: #2563eb;
+        }
+        .btn {
+            background-color: #2563eb;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #222;
+        }
+        .values, .team, .process {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 30%;
+            text-align: center;
+        }
+        .process-step {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .process-number {
+            background: #2563eb;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 50%;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cta {
+            background: #2563eb;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta a {
+            background: white;
+            color: #2563eb;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .cta a:hover {
+            background: #ddd;
+        }
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header style="display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: white; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); position: sticky; top: 0; z-index: 1000;">
+
+    <!-- Logo -->
+    <div class="logo" style="font-size: 1.8rem; font-weight: bold; color: #2563eb;">
+        <a href="index.html" style="text-decoration: none; color: inherit;">FreshDairy</a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="flex space-x-6" style="display: flex; gap: 20px; list-style: none; padding: 0; margin: 0;">
+            <li><a href="index.html" class="hover:text-blue-600 text-blue-600" style="text-decoration: none; color: #333; font-weight: 500;">Home</a></li>
+            <li><a href="products.html" class="hover:text-blue-600" style="text-decoration: none; color: #333; font-weight: 500;">Products</a></li>
+            <li><a href="Subscription.html" class="hover:text-blue-600" style="text-decoration: none; color: #333; font-weight: 500;">Subscription</a></li>
+            <li><a href="about.html" class="hover:text-blue-600" style="text-decoration: none; color: #2563eb; font-weight: 600;">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-blue-600" style="text-decoration: none; color: #333; font-weight: 500;">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Subscribe Button -->
+    <a href="Subscription.html" class="btn" style="background-color: #2563eb; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s;">
+        Subscribe Now
+    </a>
+
+</header>
+
+<!-- Responsive Design -->
+<style>
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+            padding: 15px;
+        }
+        nav ul {
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .btn {
+            margin-top: 10px;
+            display: inline-block;
+        }
+    }
+</style>
+
+
+<!-- Our Story -->
+<section class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; max-width: 1200px; margin: auto; padding: 50px 20px;">
+    
+    <!-- Text Content -->
+    <div style="width: 100%; max-width: 600px; flex: 1; padding: 20px;">
+        <h1 style="font-size: 2.5rem; font-weight: bold; color: #222;">Our Story</h1>
+        <p style="color: #555; font-size: 1.1rem; line-height: 1.6;">
+            FreshDairy began with a simple idea: to connect people with the freshest dairy products from local farms. 
+            Founded in 2025, we’ve grown from a small family operation to a beloved dairy delivery service trusted by thousands of customers.
+        </p>
+        <p style="color: #555; font-size: 1.1rem; line-height: 1.6;">
+            Our mission is to provide farm-fresh dairy products while supporting sustainable farming practices and local communities. 
+            We work directly with small family farms that prioritize animal welfare and environmental stewardship.
+        </p>
+        
+        <!-- Buttons -->
+        <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 15px;">
+            <a href="#" style="background-color: #2563eb; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s ease-in-out;">
+                Join Our Family
+            </a>
+            <a href="contact.html" style="background-color: #ffffff; color: #333; padding: 12px 20px; border: 1px solid #ccc; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s ease-in-out;">
+                Contact Us
+            </a>
+        </div>
+    </div>
+
+    <!-- Image Section -->
+    <div style="width: 100%; max-width: 500px; flex: 1; padding: 20px;">
+        <img src="images/8129919.jpg" alt="Dairy farm" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
+    </div>
+
+</section>
+
+<!-- Responsive Design -->
+<style>
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            text-align: center;
+        }
+        .container div {
+            max-width: 100%;
+            text-align: center;
+        }
+        .container div img {
+            width: 100%;
+        }
+        .container div a {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
+
+<!-- Our Values Section -->
+<section style="max-width: 1200px; margin: auto; text-align: center; padding: 60px 20px;">
+    <h2 style="font-size: 2rem; font-weight: bold; color: #222;">Our Values</h2>
+    
+    <div style="display: flex; justify-content: space-between; gap: 20px; margin-top: 30px; flex-wrap: wrap;">
+        
+        <!-- Quality First -->
+        <div class="value-card">
+            <div class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+            </div>
+            <h3>Quality First</h3>
+            <p>
+                We're committed to providing the highest quality dairy products. We carefully select our partner farms and maintain strict quality control throughout our supply chain.
+            </p>
+        </div>
+
+        <!-- Sustainability -->
+        <div class="value-card">
+            <div class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h3>Sustainability</h3>
+            <p>
+                We believe in sustainable farming practices that protect our environment. We work with farms that prioritize animal welfare, reduce waste, and minimize environmental impact.
+            </p>
+        </div>
+
+        <!-- Community -->
+        <div class="value-card">
+            <div class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            </div>
+            <h3>Community</h3>
+            <p>
+                We're proud to support local communities by partnering with family farms and creating jobs. We believe in building strong relationships with our customers, farmers, and employees.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Styles -->
+<style>
+    /* Card Style */
+    .value-card {
+        background: white;
+        border-radius: 12px;
+        padding: 30px;
+        flex: 1;
+        min-width: 280px;
+        max-width: 32%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+    /* Hover Effect */
+    .value-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Icon Styling */
+    .icon-circle {
+        background: #f0f7ff;
+        width: 60px;
+        height: 60px;
+        margin: auto;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon-circle img {
+        width: 30px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .value-card {
+            max-width: 48%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .value-card {
+            max-width: 100%;
+        }
+    }
+</style>
+
+
+  <!-- Meet Our Team -->
+<section style="max-width: 1200px; margin: auto; text-align: center; padding: 60px 20px;">
+    <h2 style="font-size: 2rem; font-weight: bold; color: #222;">Meet Our Team</h2>
+    
+    <div style="display: flex; justify-content: space-between; gap: 20px; margin-top: 30px; flex-wrap: wrap;">
+        
+        <!-- Team Member - Sarah Johnson -->
+        <div class="team-card">
+            <img src="images/Sarah Johnson.jpg" alt="Sarah Johnson">
+            <div class="team-info">
+                <h3>Sarah Johnson</h3>
+                <p><a href="#" class="team-role">Founder & CEO</a></p>
+                <p>Sarah founded FreshDairy in 2010 with a mission to deliver farm-fresh dairy products directly to consumers.</p>
+            </div>
+        </div>
+
+        <!-- Team Member - Michael Chen -->
+        <div class="team-card">
+            <img src="images/Michael Chen.jpg" alt="Michael Chen">
+            <div class="team-info">
+                <h3>Michael Chen</h3>
+                <p><a href="#" class="team-role">Head of Operations</a></p>
+                <p>Michael oversees all aspects of our dairy production and delivery operations, ensuring quality and efficiency.</p>
+            </div>
+        </div>
+
+        <!-- Team Member - Emma Williams -->
+        <div class="team-card">
+            <img src="images/Emma Williams.jpg" alt="Emma Williams">
+            <div class="team-info">
+                <h3>Emma Williams</h3>
+                <p><a href="#" class="team-role">Chief Dairy Expert</a></p>
+                <p>With over 15 years of experience in dairy production, Emma ensures our products meet the highest standards.</p>
+            </div>
+        </div>
+
+        <!-- Team Member - David Rodriguez -->
+        <div class="team-card">
+            <img src="images/David Rodriguez.jpg" alt="David Rodriguez">
+            <div class="team-info">
+                <h3>David Rodriguez</h3>
+                <p><a href="#" class="team-role">Customer Experience Director</a></p>
+                <p>David leads our customer service team, making sure every customer has an exceptional experience with FreshDairy.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Styles -->
+<style>
+    /* Team Card Style */
+    .team-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        width: 23%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+    /* Hover Effect */
+    .team-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Team Image */
+    .team-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    /* Team Info */
+    .team-info {
+        padding: 20px;
+    }
+
+    .team-info h3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #222;
+    }
+
+    .team-role {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .team-role:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .team-card {
+            width: 48%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .team-card {
+            width: 100%;
+        }
+    }
+</style>
+
+ <!-- Our Process -->
+<section style="max-width: 900px; margin: auto; text-align: center; padding: 60px 20px;">
+    <h2 style="font-size: 2rem; font-weight: bold; color: #222;">Our Process</h2>
+
+    <div style="display: flex; flex-direction: column; gap: 40px; margin-top: 40px; position: relative;">
+
+        <!-- Vertical Timeline Line -->
+        <div style="position: absolute; left: 50%; top: 0; width: 4px; height: 100%; background: #2563eb; transform: translateX(-50%); border-radius: 2px;"></div>
+
+        <!-- Step 1: Sourcing -->
+        <div class="process-step">
+            <div class="process-number">1</div>
+            <div class="process-content">
+                <h3>Sourcing</h3>
+                <p>We partner with local farms that share our values of quality, sustainability, and animal welfare.</p>
+            </div>
+            <div class="process-image">
+                <img src="images/Sourcing.jpg" alt="Dairy farm sourcing">
+            </div>
+        </div>
+
+        <!-- Step 2: Quality Control -->
+        <div class="process-step">
+            <div class="process-image">
+                <img src="images/Quality Control.avif" alt="Quality control">
+            </div>
+            <div class="process-number">2</div>
+            <div class="process-content">
+                <h3>Quality Control</h3>
+                <p>Every product undergoes rigorous quality testing to ensure it meets our high standards. We monitor temperature, freshness, and taste at every stage of the process.</p>
+            </div>
+        </div>
+
+        <!-- Step 3: Packaging -->
+        <div class="process-step">
+            <div class="process-number">3</div>
+            <div class="process-content">
+                <h3>Packaging</h3>
+                <p>We use eco-friendly packaging that keeps products fresh while minimizing environmental impact. Our packaging is designed to be recyclable or biodegradable whenever possible.</p>
+            </div>
+            <div class="process-image">
+                <img src="images/Packaging.jpg" alt="Eco-friendly packaging">
+            </div>
+        </div>
+
+        <!-- Step 4: Delivery -->
+        <div class="process-step">
+            <div class="process-image">
+                <img src="images/Delivery.jpg" alt="Delivery service">
+            </div>
+            <div class="process-number">4</div>
+            <div class="process-content">
+                <h3>Delivery</h3>
+                <p>Our efficient delivery system brings fresh dairy products directly to your doorstep. We use temperature-controlled vehicles to ensure products remain fresh throughout the journey.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Styles -->
+<style>
+    /* Process Step Layout */
+    .process-step {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* Step Number */
+    .process-number {
+        background: #2563eb;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        z-index: 2;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Step Content */
+    .process-content {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        width: 45%;
+        text-align: left;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Step Image */
+    .process-image {
+        width: 45%;
+        text-align: center;
+    }
+
+    .process-image img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    /* Hover Effects */
+    .process-content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .process-image img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Positioning for Left and Right Steps */
+    .process-step:nth-child(odd) .process-content {
+        margin-left: auto;
+    }
+
+    .process-step:nth-child(even) .process-content {
+        margin-right: auto;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .process-step {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .process-content {
+            width: 100%;
+        }
+
+        .process-number {
+            position: static;
+            transform: none;
+            margin-bottom: 10px;
+        }
+
+        .process-image {
+            width: 100%;
+        }
+    }
+</style>
+<!-- Call to Action Section -->
+<section style="background: #0b72b5; color: white; text-align: center; padding: 60px 20px; border-radius: 12px; max-width: 1200px; margin: auto;">
+    <h2 style="font-size: 2rem; font-weight: bold;">Join the FreshDairy Family</h2>
+    <p style="font-size: 1.2rem; margin-top: 10px;">
+        Experience the difference of farm-fresh dairy delivered to your door. 
+        Start your subscription today and taste the quality difference.
+    </p>
+    <a href="Subscription.html" style="
+        display: inline-block;
+        background: white;
+        color: #0b72b5;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s ease, transform 0.2s ease;
+    ">Start Your Subscription</a>
+</section>
+
+<!-- Styles -->
+<style>
+    /* Hover Effect for Button */
+    a:hover {
+        background: #f0f0f0;
+        transform: scale(1.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        section {
+            padding: 40px 15px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+        }
+        
+        p {
+            font-size: 1rem;
+        }
+        
+        a {
+            font-size: 0.9rem;
+            padding: 10px 20px;
+        }
+    }
+</style>
+
+<!-- Footer -->
+<footer style="background: #1f2937; color: white; padding: 50px 20px; font-size: 1rem;">
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+        
+        <!-- FreshDairy Info -->
+        <div style="max-width: 300px;">
+            <h3 style="font-size: 1.2rem; font-weight: bold;">FreshDairy</h3>
+            <p style="color: #d1d5db;">Delivering farm-fresh dairy products directly to your doorstep since 2025.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 style="font-size: 1.2rem; font-weight: bold;">Quick Links</h3>
+            <ul style="list-style: none; padding: 0; margin-top: 10px;">
+                <li style="margin-bottom: 10px;"><a href="index.html" style="color: #d1d5db; text-decoration: none;">Home</a></li>
+                <li style="margin-bottom: 10px;"><a href="products.html" style="color: #d1d5db; text-decoration: none;">Products</a></li>
+                <li style="margin-bottom: 10px;"><a href="Subscription.html" style="color: #d1d5db; text-decoration: none;">Subscription</a></li>
+                <li style="margin-bottom: 10px;"><a href="about.html" style="color: #d1d5db; text-decoration: none;">About Us</a></li>
+                <li><a href="contact.html" style="color: #d1d5db; text-decoration: none;">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div>
+            <h3 style="font-size: 1.2rem; font-weight: bold;">Customer Service</h3>
+            <ul style="list-style: none; padding: 0; margin-top: 10px;">
+                <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #d1d5db; text-decoration: none;">FAQs</a></li>
+                <li style="margin-bottom: 10px;"><a href="shipping.html" style="color: #d1d5db; text-decoration: none;">Shipping Policy</a></li>
+                <li style="margin-bottom: 10px;"><a href="returns.html" style="color: #d1d5db; text-decoration: none;">Returns & Refunds</a></li>
+                <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #d1d5db; text-decoration: none;">Privacy Policy</a></li>
+                <li><a href="terms.html" style="color: #d1d5db; text-decoration: none;">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+            <h3 style="font-size: 1.2rem; font-weight: bold;">Contact Us</h3>
+            <p style="color: #d1d5db; margin-top: 10px;">
+                123 Dairy Farm Road, CA 90210<br>
+                (123) 456-7890<br>
+                <a href="mailto:info@freshdairy.com" style="color: #d1d5db; text-decoration: none;">info@freshdairy.com</a>
+            </p>
+        </div>
+        
+    </div>
+
+    <!-- Copyright -->
+    <div style="text-align: center; margin-top: 30px; border-top: 1px solid #374151; padding-top: 20px; color: #9ca3af;">
+        &copy; 2025 FreshDairy. All rights reserved.
+    </div>
+</footer>
+
+<!-- Styles -->
+<style>
+    /* Ensure links are clickable but no hover effect */
+    footer a {
+        color: #d1d5db;
+        text-decoration: none;
+    }
+
+    /* Prevent Background Change on Click */
+    footer a:active,
+    footer a:focus {
+        background: none !important;
+    }
+
+    /* Prevent Button Click Effects */
+    button:active,
+    button:focus {
+        background: inherit !important;
+        outline: none !important;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        footer div {
+            text-align: center;
+        }
+
+        footer div > ul {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+
+
+</body>
+</html>

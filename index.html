@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshDairy - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+<!-- Header -->
+<header class="bg-white shadow-md py-3 px-6 flex justify-between items-center fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all">
+    <div class="text-blue-600 font-bold text-2xl">
+        <a href="index.html">FreshDairy</a>
+    </div>
+    <nav class="hidden lg:flex space-x-6 text-gray-700 font-medium">
+        <ul class="flex space-x-6">
+            <li><a href="index.html" class="hover:text-blue-600 text-blue-600">Home</a></li>
+            <li><a href="products.html" class="hover:text-blue-600">Products</a></li>
+            <li><a href="Subscription.html" class="hover:text-blue-600">Subscription</a></li>
+            <li><a href="about.html" class="hover:text-blue-600">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="flex items-center space-x-4">
+        <a href="Subscription.html" class="bg-blue-600 text-white px-6 py-2 rounded-md shadow-md hover:bg-blue-700 transition">
+            Subscribe Now
+        </a>
+    </div>
+</header>
+
+<!-- Add padding to prevent content from being hidden behind the fixed header -->
+<div class="mt-16"></div>
+
+
+<!-- Hero Section with Background Image -->
+<section class="relative text-left py-24 px-6 lg:px-32 bg-cover bg-center bg-no-repeat" 
+    style="background-image: url('images/background.jpg');">
+    <!-- Dark overlay for readability -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-white">
+        <h1 class="text-5xl font-bold leading-tight">
+            Fresh Dairy Products <br> Delivered to Your Door
+        </h1>
+        <p class="mt-4 text-lg text-gray-200 max-w-lg">
+            Experience the taste of farm-fresh dairy with our premium products and convenient subscription service.
+        </p>
+        <div class="mt-6 flex space-x-4">
+            <a href="Subscription.html" class="bg-white text-blue-600 px-6 py-3 rounded-md font-medium flex items-center space-x-2 shadow-md hover:bg-gray-100 transition">
+                <span>Subscribe Now</span> 
+                <span>→</span>
+            </a>
+            <a href="products.html" class="border border-gray-300 text-white px-6 py-3 rounded-md font-medium flex items-center space-x-2 hover:bg-gray-700 transition">
+                <span>Explore Products</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Our Dairy -->
+<section class="text-center py-20 bg-white">
+    <h2 class="text-3xl font-bold text-gray-800">Why Choose Our Dairy?</h2>
+    <div class="max-w-7xl mx-auto px-6 mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Feature Box 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fadeIn">
+            <div class="mb-4 text-blue-600 transition duration-300 hover:text-blue-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9 12l2 2 4-4"></path>
+                </svg>
+            </div>
+            <h3 class="font-bold text-xl">Farm Fresh Quality</h3>
+            <p class="text-gray-600 mt-2">Our products come directly from local farms, ensuring the freshest quality dairy for your family.</p>
+        </div>
+
+        <!-- Feature Box 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fadeIn delay-150">
+            <div class="mb-4 text-blue-600 transition duration-300 hover:text-blue-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 9L6 9 12 4 6 12 18 12 12 16 18 9z"></path>
+                </svg>
+            </div>
+            <h3 class="font-bold text-xl">Convenient Delivery</h3>
+            <p class="text-gray-600 mt-2">Regular deliveries on your schedule, so you never run out of your favorite dairy products.</p>
+        </div>
+
+        <!-- Feature Box 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg animate-fadeIn delay-300">
+            <div class="mb-4 text-blue-600 transition duration-300 hover:text-blue-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v12M6 12h12"></path>
+                </svg>
+            </div>
+            <h3 class="font-bold text-xl">Sustainable Practices</h3>
+            <p class="text-gray-600 mt-2">We're committed to sustainable farming and packaging to protect our planet for future generations.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Featured Products -->
+<section class="text-center py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center">
+            <h2 class="text-3xl font-bold text-gray-800">Featured Products</h2>
+            <a href="products.html" class="text-blue-600 hover:underline flex items-center">
+                View All →
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+            <!-- Product 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-xl opacity-0 translate-x-[-50px] animate-slideIn delay-100">
+                <div class="h-40 bg-gray-200 flex items-center justify-center rounded-md overflow-hidden">
+                    <img src="images/Organic Whole Milk.jpg" alt="Organic Whole Milk" class="w-full h-full object-cover rounded-md transition-transform duration-300 hover:scale-110">
+                </div>
+                <!-- Ratings -->
+                <div class="flex items-center justify-center mt-3">
+                    ⭐⭐⭐⭐⭐ <span class="text-gray-500 ml-2">(124)</span>
+                </div>
+                <h3 class="font-bold text-lg mt-2">Organic Whole Milk</h3>
+                <p class="text-gray-500 text-sm">Fresh organic whole milk from grass-fed cows</p>
+                <div class="flex justify-between items-center mt-4">
+                    <p class="text-xl font-bold">$4.99</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-xl opacity-0 translate-x-[50px] animate-slideIn delay-200">
+                <div class="h-40 bg-gray-200 flex items-center justify-center rounded-md overflow-hidden">
+                    <img src="images/Artisan Cheese Selection.webp" alt="Artisan Cheese Selection" class="w-full h-full object-cover rounded-md transition-transform duration-300 hover:scale-110">
+                </div>
+                <!-- Ratings -->
+                <div class="flex items-center justify-center mt-3">
+                    ⭐⭐⭐⭐☆ <span class="text-gray-500 ml-2">(86)</span>
+                </div>
+                <h3 class="font-bold text-lg mt-2">Artisan Cheese Selection</h3>
+                <p class="text-gray-500 text-sm">Handcrafted selection of premium artisan cheeses</p>
+                <div class="flex justify-between items-center mt-4">
+                    <p class="text-xl font-bold">$12.99</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-xl opacity-0 translate-x-[-50px] animate-slideIn delay-300">
+                <div class="h-40 bg-gray-200 flex items-center justify-center rounded-md overflow-hidden">
+                    <img src="images/Greek Yogurt.jpg" alt="Greek Yogurt" class="w-full h-full object-cover rounded-md transition-transform duration-300 hover:scale-110">
+                </div>
+                <!-- Ratings -->
+                <div class="flex items-center justify-center mt-3">
+                    ⭐⭐⭐⭐⭐ <span class="text-gray-500 ml-2">(152)</span>
+                </div>
+                <h3 class="font-bold text-lg mt-2">Greek Yogurt</h3>
+                <p class="text-gray-500 text-sm">Creamy Greek yogurt made with traditional methods</p>
+                <div class="flex justify-between items-center mt-4">
+                    <p class="text-xl font-bold">$3.49</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-xl opacity-0 translate-x-[50px] animate-slideIn delay-400">
+                <div class="h-40 bg-gray-200 flex items-center justify-center rounded-md overflow-hidden">
+                    <img src="images/Farm Fresh Butter.avif" alt="Farm Fresh Butter" class="w-full h-full object-cover rounded-md transition-transform duration-300 hover:scale-110">
+                </div>
+                <!-- Ratings -->
+                <div class="flex items-center justify-center mt-3">
+                    ⭐⭐⭐⭐☆ <span class="text-gray-500 ml-2">(98)</span>
+                </div>
+                <h3 class="font-bold text-lg mt-2">Farm Fresh Butter</h3>
+                <p class="text-gray-500 text-sm">Rich and creamy butter from pasture-raised cows</p>
+                <div class="flex justify-between items-center mt-4">
+                    <p class="text-xl font-bold">$5.99</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tailwind CSS animations -->
+<style>
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .animate-slideIn {
+        animation: slideIn 1s ease-out forwards;
+    }
+</style>
+
+
+<!-- Choose Your Subscription Plan -->
+<section class="text-center py-20 bg-blue-600 text-white">
+    <h2 class="text-3xl font-bold">Choose Your Subscription Plan</h2>
+    <p class="mt-4">Get fresh dairy delivered on your schedule. Choose the plan that works best for you and enjoy farm-fresh products at your doorstep.</p>
+
+    <!-- Subscription Buttons -->
+    <div class="flex flex-wrap justify-center mt-6 space-x-4">
+        <button onclick="highlightPlan('daily')" id="dailyBtn" class="bg-white text-blue-600 px-6 py-2 rounded-md font-semibold">Daily</button>
+        <button onclick="highlightPlan('weekly')" id="weeklyBtn" class="bg-blue-800 text-white px-6 py-2 rounded-md">Weekly</button>
+        <button onclick="highlightPlan('monthly')" id="monthlyBtn" class="bg-blue-800 text-white px-6 py-2 rounded-md">Monthly</button>
+    </div>
+
+    <!-- Subscription Plans -->
+    <div class="mt-6 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Daily Plan -->
+        <div id="dailyPlan" class="plan bg-blue-800 p-6 rounded-lg border-4 border-transparent">
+            <h3 class="text-xl font-bold">Daily Subscription</h3>
+            <p class="mt-2 text-gray-300">Fresh milk delivered every morning</p>
+            <ul class="text-gray-300 list-disc pl-6 mt-3">
+                <li>Fresh milk every day</li>
+                <li>Flexible delivery times</li>
+                <li>No long-term commitment</li>
+                <li>Easy to pause or cancel</li>
+            </ul>
+            <div class="flex justify-between items-center mt-6">
+                <p class="text-2xl font-bold">$2.99 <span class="text-lg">per daily delivery</span></p>
+                <a href="Subscription.html" class="bg-white text-blue-600 px-6 py-2 rounded-md">Subscribe Now</a>
+            </div>
+        </div>
+
+        <!-- Weekly Plan -->
+        <div id="weeklyPlan" class="plan bg-blue-800 p-6 rounded-lg border-4 border-transparent">
+            <h3 class="text-xl font-bold">Weekly Subscription</h3>
+            <p class="mt-2 text-gray-300">Weekly delivery of dairy essentials</p>
+            <ul class="text-gray-300 list-disc pl-6 mt-3">
+                <li>Milk, cheese, and yogurt</li>
+                <li>Convenient once-a-week delivery</li>
+                <li>Save on bulk orders</li>
+            </ul>
+            <div class="flex justify-between items-center mt-6">
+                <p class="text-2xl font-bold">$18.99 <span class="text-lg">per week</span></p>
+                <a href="Subscription.html" class="bg-white text-blue-600 px-6 py-2 rounded-md">Subscribe Now</a>
+            </div>
+        </div>
+
+        <!-- Monthly Plan -->
+        <div id="monthlyPlan" class="plan bg-blue-800 p-6 rounded-lg border-4 border-transparent">
+            <h3 class="text-xl font-bold">Monthly Subscription</h3>
+            <p class="mt-2 text-gray-300">Premium selection of dairy products every month.</p>
+            <ul class="text-gray-300 list-disc pl-6 mt-3">
+                <li>Curated selection of dairy products</li>
+                <li>Best value for regular customers</li>
+                <li>Exclusive access to new products</li>
+            </ul>
+            <div class="flex justify-between items-center mt-6">
+                <p class="text-2xl font-bold">$69.99 <span class="text-lg">per month</span></p>
+                <a href="Subscription.html" class="bg-white text-blue-600 px-6 py-2 rounded-md">Subscribe Now</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Subscription Plan Highlight Script -->
+<script>
+    function highlightPlan(plan) {
+        // Remove border from all plans
+        document.getElementById("dailyPlan").classList.remove("border-white");
+        document.getElementById("weeklyPlan").classList.remove("border-white");
+        document.getElementById("monthlyPlan").classList.remove("border-white");
+
+        // Add highlight to selected plan
+        document.getElementById(plan + "Plan").classList.add("border-white");
+
+        // Reset button styles to default
+        document.getElementById("dailyBtn").classList.remove("bg-white", "text-blue-600");
+        document.getElementById("weeklyBtn").classList.remove("bg-white", "text-blue-600");
+        document.getElementById("monthlyBtn").classList.remove("bg-white", "text-blue-600");
+
+        document.getElementById("dailyBtn").classList.add("bg-blue-800", "text-white");
+        document.getElementById("weeklyBtn").classList.add("bg-blue-800", "text-white");
+        document.getElementById("monthlyBtn").classList.add("bg-blue-800", "text-white");
+
+        // Apply selected button style
+        document.getElementById(plan + "Btn").classList.remove("bg-blue-800", "text-white");
+        document.getElementById(plan + "Btn").classList.add("bg-white", "text-blue-600");
+    }
+</script>
+
+
+    <!-- What Our Customers Say -->
+    <section class="text-center py-20 bg-white">
+        <h2 class="text-3xl font-bold text-gray-800">What Our Customers Say</h2>
+        <div class="max-w-7xl mx-auto px-6 mt-8 grid grid-cols-3 gap-8">
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-left">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-400">
+                        <img src="images/Sarah Johnson.jpg" alt="Profile Image" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg">Sarah Johnson</h4>
+                        <div class="text-yellow-500">★★★★★</div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mt-4 italic">"The subscription service has been a game-changer for our family. Fresh milk delivered right to our doorstep every morning!"</p>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-left">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-400">
+                        <img src="images/Michael Chen.jpg" alt="Profile Image" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg">Michael Chen</h4>
+                        <div class="text-yellow-500">★★★★★</div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mt-4 italic">"The quality of their dairy products is unmatched. I especially love their artisan cheese selection."</p>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-left">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-400">
+                        <img src="images/Emma Williams.jpg" alt="Profile Image" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg">Emma Williams</h4>
+                        <div class="text-yellow-500">★★★★★</div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mt-4 italic">"I've been a subscriber for 6 months now and couldn't be happier with the service and product quality."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-4 gap-6">
+            <div>
+                <h3 class="font-bold text-lg">FreshDairy</h3>
+                <p class="text-gray-400">Delivering farm-fresh dairy products directly to your doorstep since 2025.</p>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Quick Links</h3>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="Subscription.html">Subscription</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Customer Service</h3>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Contact Us</h3>
+                <p class="text-gray-400">123 Dairy Farm Road, CA 90210</p>
+                <p class="text-gray-400">(123) 456-7890</p>
+                <p class="text-gray-400">info@freshdairy.com</p>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 mt-8">© 2025 FreshDairy. All rights reserved.</div>
+    </footer>
+</body>
+</html>
